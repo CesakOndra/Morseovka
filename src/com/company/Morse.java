@@ -61,7 +61,7 @@ public class Morse {
         put('y', "-.--");
         put('Z', "--..");
         put('z', "--..");
-        put(' ', " ");
+        put(' ', " / ");
     }};
 
     public static String getConvertedText(String fileName)
