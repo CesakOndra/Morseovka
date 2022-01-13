@@ -5,10 +5,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
-import java.io.IOException;
-import java.net.URISyntaxException;
-
-public class Okno {
+public class Window
+{
 
     @FXML
     public TextField fileNameText;

@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.Okno">
+<AnchorPane prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.Window">
     <TextField fx:id="fileNameText" layoutX="176.0" layoutY="75.0" promptText="Enter file name..." />
     <Button fx:id="convertButton" layoutX="190.0" layoutY="125.0" mnemonicParsing="false" onAction="#onButtonClick" prefHeight="25.0" prefWidth="120.0" text="Convert">
         <font>
