@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Morse {
 
-    private static final Map<Character, String> alphabet = new HashMap<Character, String>() {{
+    private static final Map<Character, String> alphabet = new HashMap<>() {{
         put('A', ".-");
         put('a', ".-");
         put('B', "-...");
