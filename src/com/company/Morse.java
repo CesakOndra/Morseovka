@@ -1,5 +1,8 @@
 package com.company;
 
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
@@ -61,39 +64,42 @@ public class Morse {
         put('y', "-.--");
         put('Z', "--..");
         put('z', "--..");
-        put(' ', " / ");
+        put(' ', "");
     }};
 
-    public static String getConvertedText(String fileName)
+    public static String getConvertedText(String text) throws IOException
     {
-        String textToConvert = readTextFromFile(fileName);
+        String textToConvert = (text.contains(".txt")) ? readTextFromFile(text) : text;
 
         char[] letters = textToConvert.toCharArray();
 
         StringBuilder result = new StringBuilder();
 
-        for (char letter : letters)
+        for (int i = 0; i < letters.length; i++)
         {
-            String letterInMorse = alphabet.get(letter);
+            String letterInMorse = alphabet.get(letters[i]);
             result.append(letterInMorse);
+            if(i + 1 != letters.length) result.append("|");
         }
 
         return result.toString();
     }
 
-    private static String readTextFromFile(String fileName)
+    // Spatne jsem nejspis pochopil pri hodine zadani, myslel jsem, ze mame prevadet text ze souboru
+    // Je treba zadat uplnou cestu k souboru
+    private static String readTextFromFile(String fileName) throws IOException
     {
-        InputStream stream = Morse.class.getClassLoader().getResourceAsStream(fileName + ".txt");
-        Scanner scanner = new Scanner(Objects.requireNonNull(stream));
+        File file = new File(fileName);
+        Scanner scanner1 = new Scanner(new FileReader(file));
 
         StringBuilder result = new StringBuilder();
 
-        while(scanner.hasNextLine()) {
-            result.append(scanner.nextLine());
+        while(scanner1.hasNextLine()) {
+            result.append(scanner1.nextLine());
             result.append(" ");
         }
 
-        scanner.close();
+        scanner1.close();
 
         return result.toString();
     }

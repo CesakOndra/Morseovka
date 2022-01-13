@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.Window">
-    <TextField fx:id="fileNameText" layoutX="176.0" layoutY="75.0" promptText="Enter file name..." />
-    <Button fx:id="convertButton" layoutX="190.0" layoutY="125.0" mnemonicParsing="false" onAction="#onButtonClick" prefHeight="25.0" prefWidth="120.0" text="Convert">
+<AnchorPane prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.company.WindowController">
+    <TextField fx:id="text" layoutX="150.0" layoutY="92.0" prefHeight="30.0" prefWidth="200.0" promptText="Enter text/file to convert..." />
+    <Button fx:id="convertButton" layoutX="190.0" layoutY="150.0" mnemonicParsing="false" onAction="#onButtonClick" prefHeight="25.0" prefWidth="120.0" text="Convert">
         <font>
           <Font name="System Bold" size="14.0" />
         </font>
     </Button>
-    <TextArea fx:id="convertedText" layoutX="50.0" layoutY="180.0" prefHeight="200.0" prefWidth="400.0">
+   <Label fx:id="convertedText" alignment="CENTER" layoutX="50.0" layoutY="209.0" prefHeight="150.0" prefWidth="400.0" text="-Result-" textAlignment="CENTER" wrapText="true">
       <font>
-         <Font size="24.0" />
-      </font></TextArea>
+         <Font size="18.0" />
+      </font>
+   </Label>
 </AnchorPane>

@@ -17,7 +17,7 @@ public class Main extends Application {
         FXMLLoader loader = new FXMLLoader(this.getClass().getResource("window.fxml"));
         Scene scene = new Scene(loader.load());
 
-        stage.setTitle("Morseovka");
+        stage.setTitle("Morseovka Test");
         stage.setScene(scene);
         stage.show();
     }
